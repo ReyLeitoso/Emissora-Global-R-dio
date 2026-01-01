@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emissora Global - Rádio Online Mundial</title>
+    <meta name="description" content="Emissora Global - A sua rádio online com abrangência mundial. Transmissão 24/7 de música, notícias e entretenimento para todo o mundo.">
+    <meta name="keywords" content="rádio online, emissora global, música, notícias, entretenimento, rádio mundial">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1a365d",
+                        secondary: "#2d3748",
+                        accent: "#4299e1",
+                        "radio-red": "#e53e3e",
+                        "radio-blue": "#3182ce"
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'display': ['Montserrat', 'sans-serif']
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s infinite',
+                        'spin-slow': 'spin 4s linear infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-gradient-to-b from-gray-900 to-primary text-white font-sans">
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-gray-900/95 backdrop-blur-sm shadow-lg">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3 mb-4 md:mb-0">
+                    <div class="relative">
+                        <div class="w-12 h-12 bg-gradient-to-r from-radio-red to-radio-blue rounded-full flex items-center justify-center animate-pulse-slow">
+                            <i class="fas fa-globe-americas text-2xl"></i>
+                        </div>
+                        <div class="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full animate-ping"></div>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-display font-bold bg-gradient-to-r from-white to-accent bg-clip-text text-transparent">
+                            EMISSORA GLOBAL
+                        </h1>
+                        <p class="text-xs text-gray-400">Rádio Online Mundial</p>
+                    </div>
+                </div>
+
+                <!-- Navigation Menu -->
+                <div class="flex flex-wrap justify-center gap-4 md:gap-8">
+                    <a href="#inicio" class="nav-link" onclick="navigateToSection('inicio')">
+                        <i class="fas fa-home mr-2"></i>Início
+                    </a>
+                    <a href="#ouvir" class="nav-link" onclick="navigateToSection('ouvir')">
+                        <i class="fas fa-play-circle mr-2"></i>Ouvir Agora
+                    </a>
+                    <a href="#programacao" class="nav-link" onclick="navigateToSection('programacao')">
+                        <i class="fas fa-calendar-alt mr-2"></i>Programação
+                    </a>
+                    <a href="#equipe" class="nav-link" onclick="navigateToSection('equipe')">
+                        <i class="fas fa-users mr-2"></i>Equipe
+                    </a>
+                    <a href="#contato" class="nav-link" onclick="navigateToSection('contato')">
+                        <i class="fas fa-envelope mr-2"></i>Contato
+                    </a>
+                </div>
+
+                <!-- Language Selector -->
+                <div class="mt-4 md:mt-0">
+                    <select class="bg-gray-800 text-white px-3 py-2 rounded-lg border border-gray-700 focus:outline-none focus:ring-2 focus:ring-accent">
+                        <option value="pt">🇧🇷 Português</option>
+                        <option value="en">🇺🇸 English</option>
+                        <option value="es">🇪🇸 Español</option>
+                        <option value="fr">🇫🇷 Français</option>
+                    </select>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="py-12 md:py-20">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto text-center">
+                    <div class="mb-8">
+                        <div class="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-radio-red/20 to-radio-blue/20 border border-accent/30 mb-6">
+                            <span class="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
+                            <span class="text-sm font-medium">AO VIVO AGORA</span>
+                        </div>
+                        <h2 class="text-4xl md:text-6xl font-display font-bold mb-6">
+                            <span class="bg-gradient-to-r from-white via-accent to-radio-red bg-clip-text text-transparent">
+                                CONECTANDO O MUNDO
+                            </span>
+                            <br>
+                            <span class="text-2xl md:text-4xl font-normal text-gray-300">através da música</span>
+                        </h2>
+                        <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                            A primeira rádio online com abrangência verdadeiramente global. 
+                            Transmitindo 24 horas por dia, 7 dias por semana para todos os continentes.
+                        </p>
+                    </div>
+
+                    <!-- Live Player -->
+                    <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-gray-700 max-w-2xl mx-auto">
+                        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                            <div class="flex items-center space-x-4">
+                                <div class="relative">
+                                    <img src="https://picsum.photos/120?random=1" alt="Capa da música atual" class="w-20 h-20 rounded-lg shadow-lg">
+                                    <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-radio-red rounded-full flex items-center justify-center">
+                                        <i class="fas fa-play text-xs"></i>
+                                    </div>
+                                </div>
+                                <div class="text-left">
+                                    <h3 class="font-bold text-lg">Tocando Agora</h3>
+                                    <p class="text-accent font-semibold">Imagine Dragons - Believer</p>
+                                    <p class="text-sm text-gray-400">Pop/Rock • 3:24</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4">
+                                <button class="player-control bg-gray-700 hover:bg-gray-600 w-12 h-12 rounded-full flex items-center justify-center transition-all">
+                                    <i class="fas fa-step-backward"></i>
+                                </button>
+                                <button id="playButton" class="player-control bg-gradient-to-r from-radio-red to-radio-blue w-16 h-16 rounded-full flex items-center justify-center hover:scale-105 transition-transform">
+                                    <i class="fas fa-play text-xl"></i>
+                                </button>
+                                <button class="player-control bg-gray-700 hover:bg-gray-600 w-12 h-12 rounded-full flex items-center justify-center transition-all">
+                                    <i class="fas fa-step-forward"></i>
+                                </button>
+                            </div>
+
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-volume-up text-gray-400"></i>
+                                <input type="range" min="0" max="100" value="80" class="w-24 accent-accent">
+                            </div>
+                        </div>
+
+                        <div class="mt-6">
+                            <div class="flex justify-between text-sm text-gray-400 mb-2">
+                                <span>0:00</span>
+                                <span>3:24</span>
+                            </div>
+                            <div class="h-2 bg-gray-700 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-accent to-radio-red w-1/3"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 max-w-2xl mx-auto">
+                        <div class="bg-gray-800/30 p-4 rounded-xl text-center">
+                            <div class="text-2xl font-bold text-accent">24/7</div>
+                            <div class="text-sm text-gray-400">Transmissão</div>
+                        </div>
+                        <div class="bg-gray-800/30 p-4 rounded-xl text-center">
+                            <div class="text-2xl font-bold text-radio-red">150+</div>
+                            <div class="text-sm text-gray-400">Países</div>
+                        </div>
+                        <div class="bg-gray-800/30 p-4 rounded-xl text-center">
+                            <div class="text-2xl font-bold text-green-400">50k+</div>
+                            <div class="text-sm text-gray-400">Ouvintes Online</div>
+                        </div>
+                        <div class="bg-gray-800/30 p-4 rounded-xl text-center">
+                            <div class="text-2xl font-bold text-yellow-400">10k+</div>
+                            <div class="text-sm text-gray-400">Músicas</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Listen Section -->
+        <section id="ouvir" class="py-12 bg-gray-900/50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">
+                        <span class="bg-gradient-to-r from-accent to-radio-red bg-clip-text text-transparent">
+                            COMO OUVIR
+                        </span>
+                    </h2>
+                    <p class="text-gray-300 max-w-2xl mx-auto">
+                        Escolha a maneira mais conveniente para você sintonizar a Emissora Global
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <!-- Web Player -->
+                    <div class="bg-gray-800/50 p-6 rounded-2xl border border-gray-700 hover:border-accent transition-all hover:scale-105">
+                        <div class="w-16 h-16 bg-gradient-to-br from-accent to-radio-blue rounded-xl flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-desktop text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-center">Web Player</h3>
+                        <p class="text-gray-300 mb-6 text-center">
+                            Ouça diretamente no seu navegador. Sem necessidade de instalação.
+                        </p>
+                        <button onclick="playRadio()" class="w-full bg-gradient-to-r from-accent to-radio-blue text-white py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity">
+                            <i class="fas fa-play mr-2"></i>Ouvir no Navegador
+                        </button>
+                    </div>
+
+                    <!-- Mobile App -->
+                    <div class="bg-gray-800/50 p-6 rounded-2xl border border-gray-700 hover:border-radio-red transition-all hover:scale-105">
+                        <div class="w-16 h-16 bg-gradient-to-br from-radio-red to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-mobile-alt text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-center">App Móvel</h3>
+                        <p class="text-gray-300 mb-6 text-center">
+                            Baixe nosso aplicativo para iOS e Android. Ouça em qualquer lugar.
+                        </p>
+                        <div class="flex space-x-3">
+                            <button class="flex-1 bg-gray-700 hover:bg-gray-600 py-3 rounded-lg font-semibold transition-colors">
+                                <i class="fab fa-apple mr-2"></i>iOS
+                            </button>
+                            <button class="flex-1 bg-gray-700 hover:bg-gray-600 py-3 rounded-lg font-semibold transition-colors">
+                                <i class="fab fa-android mr-2"></i>Android
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Smart Devices -->
+                    <div class="bg-gray-800/50 p-6 rounded-2xl border border-gray-700 hover:border-green-500 transition-all hover:scale-105">
+                        <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-wifi text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-center">Dispositivos</h3>
+                        <p class="text-gray-300 mb-6 text-center">
+                            Conecte-se via Alexa, Google Home ou sistemas de som inteligentes.
+                        </p>
+                        <button class="w-full bg-gray-700 hover:bg-gray-600 py-3 rounded-lg font-semibold transition-colors">
+                            <i class="fas fa-link mr-2"></i>Ver Instruções
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Programming Section -->
+        <section id="programacao" class="py-12">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">
+                        <span class="bg-gradient-to-r from-radio-red to-accent bg-clip-text text-transparent">
+                            PROGRAMAÇÃO
+                        </span>
+                    </h2>
+                    <p class="text-gray-300 max-w-2xl mx-auto">
+                        Nossa grade de programação diversificada para todos os gostos e horários
+                    </p>
+                </div>
+
+                <div class="max-w-6xl mx-auto">
+                    <!-- Schedule Navigation -->
+                    <div class="flex overflow-x-auto space-x-2 mb-8 pb-2">
+                        <button class="schedule-day active px-6 py-3 rounded-lg font-semibold whitespace-nowrap">
+                            Segunda
+                        </button>
+                        <button class="schedule-day px-6 py-3 rounded-lg font-semibold whitespace-nowrap">
+                            Terça
+                        </button>
+                        <button class="schedule-day px-6 py-3 rounded-lg font-semibold whitespace-nowrap">
+                            Quarta
+                        </button>
+                        <button class="schedule-day px-6 py-3 rounded-lg font-semibold whitespace-nowrap">
+                            Quinta
+                        </button>
+                        <button class="schedule-day px-6 py-3 rounded-lg font-semibold whitespace-nowrap">
+                            Sexta
+                        </button>
+                        <button class="schedule-day px-6 py-3 rounded-lg font-semibold whitespace-nowrap">
+                            Sábado
+                        </button>
+                        <button class="schedule-day px-6 py-3 rounded-lg font-semibold whitespace-nowrap">
+                            Domingo
+                        </button>
+                    </div>
+
+                    <!-- Schedule Grid -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <!-- Morning Programs -->
+                        <div class="bg-gray-800/30 p-6 rounded-2xl">
+                            <h3 class="text-xl font-bold mb-6 flex items-center">
+                                <i class="fas fa-sun text-yellow-400 mr-3"></i>
+                                Manhã (06:00 - 12:00)
+                            </h3>
+                            <div class="space-y-4">
+                                <div class="program-item">
+                                    <div class="program-time">06:00 - 08:00</div>
+                                    <div class="program-info">
+                                        <h4 class="font-bold">Acordando o Mundo</h4>
+                                        <p class="text-sm text-gray-400">Com João Silva</p>
+                                    </div>
+                                    <span class="program-tag">Notícias</span>
+                                </div>
+                                <div class="program-item">
+                                    <div class="program-time">08:00 - 10:00</div>
+                                    <div class="program-info">
+                                        <h4 class="font-bold">Hit Parade Global</h4>
+                                        <p class="text-sm text-gray-400">As músicas mais tocadas</p>
+                                    </div>
+                                    <span class="program-tag">Música</span>
+                                </div>
+                                <div class="program-item">
+                                    <div class="program-time">10:00 - 12:00</div>
+                                    <div class="program-info">
+                                        <h4 class="font-bold">Conexão Cultural</h4>
+                                        <p class="text-sm text-gray-400">Músicas do mundo todo</p>
+                                    </div>
+                                    <span class="program-tag">Cultural</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Afternoon Programs -->
+                        <div class="bg-gray-800/30 p-6 rounded-2xl">
+                            <h3 class="text-xl font-bold mb-6 flex items-center">
+                                <i class="fas fa-clock text-orange-400 mr-3"></i>
+                                Tarde (12:00 - 18:00)
+                            </h3>
+                            <div class="space-y-4">
+                                <div class="program-item">
+                                    <div class="program-time">12:00 - 14:00</div>
+                                    <div class="program-info">
+                                        <h4 class="font-bold">Almoço Musical</h4>
+                                        <p class="text-sm text-gray-400">MPB e Jazz</p>
+                                    </div>
+                                    <span class="program-tag">Música</span>
+                                </div>
+                                <div class="program-item">
+                                    <div class="program-time">14:00 - 16:00</div>
+                                    <div class="program-info">
+                                        <h4 class="font-bold">Notícias Globais</h4>
+                                        <p class="text-sm text-gray-400">Atualidades internacionais</p>
+                                    </div>
+                                    <span class="program-tag">Notícias</span>
+                                </div>
+                                <div class="program-item">
+                                    <div class="program-time">16:00 - 18:00</div>
+                                    <div class="program-info">
+                                        <h4 class="font-bold">Esportes Mundiais</h4>
+                                        <p class="text-sm text-gray-400">Com Maria Santos</p>
+                                    </div>
+                                    <span class="program-tag">Esportes</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Evening Programs -->
+                        <div class="bg-gray-800/30 p-6 rounded-2xl lg:col-span-2">
+                            <h3 class="text-xl font-bold mb-6 flex items-center">
+                                <i class="fas fa-moon text-purple-400 mr-3"></i>
+                                Noite (18:00 - 00:00)
+                            </h3>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                <div class="program-item">
+                                    <div class="program-time">18:00 - 20:00</div>
+                                    <div class="program-info">
+                                        <h4 class="font-bold">Trânsito Livre</h4>
+                                        <p class="text-sm text-gray-400">Música para o trânsito</p>
+                                    </div>
+                                    <span class="program-tag">Música</span>
+                                </div>
+                                <div class="program-item">
+                                    <div class="program-time">20:00 - 22:00</div>
+                                    <div class="program-info">
+                                        <h4 class="font-bold">Entrevistas Globais</h4>
+                                        <p class="text-sm text-gray-400">Personalidades internacionais</p>
+                                    </div>
+                                    <span class="program-tag">Entrevistas</span>
+                                </div>
+                                <div class="program-item">
+                                    <div class="program-time">22:00 - 00:00</div>
+                                    <div class="program-info">
+                                        <h4 class="font-bold">Noite Eletrônica</h4>
+                                        <p class="text-sm text-gray-400">DJ sets internacionais</p>
+                                    </div>
+                                    <span class="program-tag">Eletrônica</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="equipe" class="py-12 bg-gray-900/50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">
+                        <span class="bg-gradient-to-r from-accent to-radio-blue bg-clip-text text-transparent">
+                            NOSSA EQUIPE
+                        </span>
+                    </h2>
+                    <p class="text-gray-300 max-w-2xl mx-auto">
+                        Conheça os profissionais que fazem a Emissora Global acontecer 24 horas por dia
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                    <!-- Team Member 1 -->
+                    <div class="team-card">
+                        <div class="team-image">
+                            <img src="https://picsum.photos/200?random=2" alt="João Silva - Diretor de Programação" loading="lazy">
+                        </div>
+                        <h3 class="text-xl font-bold mt-4">João Silva</h3>
+                        <p class="text-accent font-semibold">Diretor de Programação</p>
+                        <p class="text-gray-400 text-sm mt-2">15 anos de experiência em rádio internacional</p>
+                        <div class="flex justify-center space-x-3 mt-4">
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 2 -->
+                    <div class="team-card">
+                        <div class="team-image">
+                            <img src="https://picsum.photos/200?random=3" alt="Maria Santos - Apresentadora" loading="lazy">
+                        </div>
+                        <h3 class="text-xl font-bold mt-4">Maria Santos</h3>
+                        <p class="text-radio-red font-semibold">Apresentadora Principal</p>
+                        <p class="text-gray-400 text-sm mt-2">Especialista em entretenimento e cultura</p>
+                        <div class="flex justify-center space-x-3 mt-4">
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 3 -->
+                    <div class="team-card">
+                        <div class="team-image">
+                            <img src="https://picsum.photos/200?random=4" alt="Carlos Oliveira - DJ" loading="lazy">
+                        </div>
+                        <h3 class="text-xl font-bold mt-4">Carlos Oliveira</h3>
+                        <p class="text-green-400 font-semibold">DJ e Produtor Musical</p>
+                        <p class="text-gray-400 text-sm mt-2">Especialista em música eletrônica e mixes</p>
+                        <div class="flex justify-center space-x-3 mt-4">
+                            <a href="#" class="social-icon"><i class="fab fa-soundcloud"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-spotify"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 4 -->
+                    <div class="team-card">
+                        <div class="team-image">
+                            <img src="https://picsum.photos/200?random=5" alt="Ana Costa - Editora de Notícias" loading="lazy">
+                        </div>
+                        <h3 class="text-xl font-bold mt-4">Ana Costa</h3>
+                        <p class="text-yellow-400 font-semibold">Editora de Notícias</p>
+                        <p class="text-gray-400 text-sm mt-2">Jornalista com experiência internacional</p>
+                        <div class="flex justify-center space-x-3 mt-4">
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contato" class="py-12">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">
+                            <span class="bg-gradient-to-r from-radio-red to-accent bg-clip-text text-transparent">
+                                ENTRE EM CONTATO
+                            </span>
+                        </h2>
+                        <p class="text-gray-300 max-w-2xl mx-auto">
+                            Tem alguma sugestão, crítica ou quer fazer parte da nossa equipe? Entre em contato!
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <!-- Contact Form -->
+                        <div class="bg-gray-800/50 p-8 rounded-2xl border border-gray-700">
+                            <h3 class="text-2xl font-bold mb-6">Envie sua mensagem</h3>
+                            <form id="contactForm" class="space-y-6">
+                                <div>
+                                    <label class="block text-gray-300 mb-2">Nome completo</label>
+                                    <input type="text" class="contact-input" placeholder="Seu nome" required>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-300 mb-2">E-mail</label>
+                                    <input type="email" class="contact-input" placeholder="seu@email.com" required>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-300 mb-2">Assunto</label>
+                                    <select class="contact-input">
+                                        <option value="">Selecione um assunto</option>
+                                        <option value="sugestao">Sugestão de música</option>
+                                        <option value="critica">Crítica ou elogio</option>
+                                        <option value="parceria">Proposta de parceria</option>
+                                        <option value="trabalho">Oportunidade de trabalho</option>
+                                        <option value="outro">Outro</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-300 mb-2">Mensagem</label>
+                                    <textarea class="contact-input h-32" placeholder="Sua mensagem..." required></textarea>
+                                </div>
+                                <button type="submit" class="w-full bg-gradient-to-r from-accent to-radio-blue text-white py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity">
+                                    <i class="fas fa-paper-plane mr-2"></i>Enviar Mensagem
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- Contact Info -->
+                        <div class="space-y-6">
+                            <div class="bg-gray-800/30 p-6 rounded-2xl">
+                                <h3 class="text-xl font-bold mb-4 flex items-center">
+                                    <i class="fas fa-info-circle text-accent mr-3"></i>
+                                    Informações de Contato
+                                </h3>
+                                <div class="space-y-4">
+                                    <div class="flex items-start">
+                                        <i class="fas fa-envelope text-gray-400 mt-1 mr-3"></i>
+                                        <div>
+                                            <p class="font-semibold">E-mail</p>
+                                            <p class="text-gray-300">contato@emissoraglobal.com</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <i class="fas fa-phone text-gray-400 mt-1 mr-3"></i>
+                                        <div>
+                                            <p class="font-semibold">Telefone</p>
+                                            <p class="text-gray-300">+55 (11) 99999-9999</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <i class="fas fa-map-marker-alt text-gray-400 mt-1 mr-3"></i>
+                                        <div>
+                                            <p class="font-semibold">Endereço</p>
+                                            <p class="text-gray-300">São Paulo, Brasil - Escritório Central</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-gray-800/30 p-6 rounded-2xl">
+                                <h3 class="text-xl font-bold mb-4 flex items-center">
+                                    <i class="fas fa-headset text-radio-red mr-3"></i>
+                                    Suporte Técnico
+                                </h3>
+                                <p class="text-gray-300 mb-4">
+                                    Problemas para ouvir a rádio? Nosso suporte técnico está disponível 24/7.
+                                </p>
+                                <button class="w-full bg-gray-700 hover:bg-gray-600 py-3 rounded-lg font-semibold transition-colors">
+                                    <i class="fas fa-comments mr-2"></i>Chat Online
+                                </button>
+                            </div>
+
+                            <div class="bg-gray-800/30 p-6 rounded-2xl">
+                                <h3 class="text-xl font-bold mb-4">Siga-nos</h3>
+                                <div class="flex justify-center space-x-4">
+                                    <a href="#" class="social-btn bg-blue-600 hover:bg-blue-700">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#" class="social-btn bg-pink-600 hover:bg-pink-700">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="#" class="social-btn bg-blue-400 hover:bg-blue-500">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="social-btn bg-red-600 hover:bg-red-700">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                    <a href="#" class="social-btn bg-green-600 hover:bg-green-700">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 mt-12">
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Logo & Description -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-r from-radio-red to-radio-blue rounded-full flex items-center justify-center">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-display font-bold">EMISSORA GLOBAL</h3>
+                            <p class="text-sm text-gray-400">Rádio Online Mundial</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Conectando pessoas através da música desde 2010. Transmitindo para todo o mundo com qualidade e diversidade.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-app-store-ios text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-google-play text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-spotify text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="footer-link" onclick="navigateToSection('inicio')">Início</a></li>
+                        <li><a href="#ouvir" class="footer-link" onclick="navigateToSection('ouvir')">Ouvir Agora</a></li>
+                        <li><a href="#programacao" class="footer-link" onclick="navigateToSection('programacao')">Programação</a></li>
+                        <li><a href="#equipe" class="footer-link" onclick="navigateToSection('equipe')">Equipe</a></li>
+                        <li><a href="#contato" class="footer-link" onclick="navigateToSection('contato')">Contato</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-300 mb-4">
+                        Receba as novidades da Emissora Global no seu e-mail.
+                    </p>
+                    <div class="flex">
+                        <input type="email" placeholder="Seu e-mail" class="flex-1 bg-gray-800 text-white px-4 py-2 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-accent">
+                        <button class="bg-gradient-to-r from-accent to-radio-blue px-4 py-2 rounded-r-lg font-semibold hover:opacity-90 transition-opacity">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Emissora Global - Rádio Online Mundial. Todos os direitos reservados.</p>
+                <p class="mt-2 text-sm">
+                    <a href="#" class="hover:text-white">Política de Privacidade</a> • 
+                    <a href="#" class="hover:text-white">Termos de Uso</a> • 
+                    <a href="#" class="hover:text-white">Cookies</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent -->
+    <div id="cookieConsent" class="fixed bottom-0 left-0 right-0 bg-gray-800 border-t border-gray-700 p-4 z-50 hidden">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="mb-4 md:mb-0 md:mr-4">
+                    <p class="text-gray-300">
+                        Usamos cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa 
+                        <a href="#" class="text-accent hover:underline">Política de Cookies</a>.
+                    </p>
+                </div>
+                <div class="flex space-x-3">
+                    <button onclick="acceptCookies()" class="bg-gradient-to-r from-accent to-radio-blue text-white px-6 py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity">
+                        Aceitar
+                    </button>
+                    <button onclick="declineCookies()" class="bg-gray-700 hover:bg-gray-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
+                        Recusar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Define data at the beginning
+        const scheduleData = {
+            "segunda": [
+                { "time": "06:00 - 08:00", "title": "Acordando o Mundo", "host": "Com João Silva", "tag": "Notícias" },
+                { "time": "08:00 - 10:00", "title": "Hit Parade Global", "host": "As músicas mais tocadas", "tag": "Música" },
+                { "time": "10:00 - 12:00", "title": "Conexão Cultural", "host": "Músicas do mundo todo", "tag": "Cultural" }
+            ],
+            "terca": [
+                { "time": "06:00 - 08:00", "title": "Bom Dia Mundo", "host": "Com Ana Costa", "tag": "Notícias" },
+                { "time": "08:00 - 10:00", "title": "Clássicos Internacionais", "host": "Músicas clássicas", "tag": "Música" }
+            ],
+            "quarta": [
+                { "time": "06:00 - 08:00", "title": "Despertar Global", "host": "Com Carlos Oliveira", "tag": "Notícias" },
+                { "time": "08:00 - 10:00", "title": "Jazz & Blues", "host": "Músicas relaxantes", "tag": "Música" }
+            ],
+            "quinta": [
+                { "time": "06:00 - 08:00", "title": "Manhã News", "host": "Com Maria Santos", "tag": "Notícias" },
+                { "time": "08:00 - 10:00", "title": "Pop Internacional", "host": "As mais tocadas", "tag": "Música" }
+            ],
+            "sexta": [
+                { "time": "06:00 - 08:00", "title": "Sexta no Ar", "host": "Com João Silva", "tag": "Notícias" },
+                { "time": "08:00 - 10:00", "title": "Preparando o Fim de Semana", "host": "Músicas animadas", "tag": "Música" }
+            ],
+            "sabado": [
+                { "time": "08:00 - 12:00", "title": "Sábado Musical", "host": "Músicas variadas", "tag": "Música" },
+                { "time": "12:00 - 16:00", "title": "Esportes ao Vivo", "host": "Transmissões esportivas", "tag": "Esportes" }
+            ],
+            "domingo": [
+                { "time": "08:00 - 12:00", "title": "Domingo Relax", "host": "Músicas tranquilas", "tag": "Música" },
+                { "time": "12:00 - 16:00", "title": "Retrospectiva Semanal", "host": "Melhores momentos", "tag": "Variedades" }
+            ]
+        };
+
+        const teamMembers = [
+            { 
+                "id": 1, 
+                "name": "João Silva", 
+                "role": "Diretor de Programação", 
+                "description": "15 anos de experiência em rádio internacional",
+                "image": "https://picsum.photos/200?random=2",
+                "color": "accent"
+            },
+            { 
+                "id": 2, 
+                "name": "Maria Santos", 
+                "role": "Apresentadora Principal", 
+                "description": "Especialista em entretenimento e cultura",
+                "image": "https://picsum.photos/200?random=3",
+                "color": "radio-red"
+            },
+            { 
+                "id": 3, 
+                "name": "Carlos Oliveira", 
+                "role": "DJ e Produtor Musical", 
+                "description": "Especialista em música eletrônica e mixes",
+                "image": "https://picsum.photos/200?random=4",
+                "color": "green-400"
+            },
+            { 
+                "id": 4, 
+                "name": "Ana Costa", 
+                "role": "Editora de Notícias", 
+                "description": "Jornalista com experiência internacional",
+                "image": "https://picsum.photos/200?random=5",
+                "color": "yellow-400"
+            }
+        ];
+
+        // DOM Elements
+        const playButton = document.getElementById('playButton');
+        const scheduleDays = document.querySelectorAll('.schedule-day');
+        const contactForm = document.getElementById('contactForm');
+        const cookieConsent = document.getElementById('cookieConsent');
+
+        // Radio Player State
+        let isPlaying = false;
+        let currentTrack = {
+            title: "Imagine Dragons - Believer",
+            duration: "3:24",
+            progress: 33
+        };
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            // Show cookie consent if not accepted
+            if (!localStorage.getItem('cookiesAccepted')) {
+                setTimeout(() => {
+                    cookieConsent.classList.remove('hidden');
+                }, 2000);
+            }
+
+            // Initialize schedule
+            initializeSchedule();
+
+            // Initialize player
+            initializePlayer();
+        });
+
+        // Navigation function
+        function navigateToSection(sectionId) {
+            event.preventDefault();
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Player functions
+        function initializePlayer() {
+            playButton.addEventListener('click', togglePlay);
+            
+            // Volume control
+            const volumeSlider = document.querySelector('input[type="range"]');
+            volumeSlider.addEventListener('input', function(e) {
+                console.log("Volume alterado para:", e.target.value + "%");
+            });
+        }
+
+        function togglePlay() {
+            isPlaying = !isPlaying;
+            const icon = playButton.querySelector('i');
+            
+            if (isPlaying) {
+                icon.classList.remove('fa-play');
+                icon.classList.add('fa-pause');
+                playButton.classList.add('playing');
+                console.log("Rádio iniciada - Emissora Global Online");
+                
+                // Simulate track progress
+                simulateProgress();
+            } else {
+                icon.classList.remove('fa-pause');
+                icon.classList.add('fa-play');
+                playButton.classList.remove('playing');
+                console.log("Rádio pausada");
+            }
+        }
+
+        function simulateProgress() {
+            if (isPlaying) {
+                const progressBar = document.querySelector('.h-2.bg-gradient-to-r');
+                let progress = currentTrack.progress;
+                
+                const interval = setInterval(() => {
+                    if (!isPlaying) {
+                        clearInterval(interval);
+                        return;
+                    }
+                    
+                    progress += 0.5;
+                    if (progress > 100) progress = 0;
+                    
+                    progressBar.style.width = progress + '%';
+                    
+                    // Update time display
+                    const currentTime = document.querySelector('.flex.justify-between.text-sm.text-gray-400.mb-2 span:first-child');
+                    if (currentTime) {
+                        const seconds = Math.floor((progress / 100) * 204); // 3:24 = 204 seconds
+                        const mins = Math.floor(seconds / 60);
+                        const secs = seconds % 60;
+                        currentTime.textContent = `${mins}:${secs.toString().padStart(2, '0')}`;
+                    }
+                }, 1000);
+            }
+        }
+
+        function playRadio() {
+            if (!isPlaying) {
+                togglePlay();
+            }
+            alert("Emissora Global está tocando! Aproveite nossa programação 24/7.");
+        }
+
+        // Schedule functions
+        function initializeSchedule() {
+            scheduleDays.forEach(day => {
+                day.addEventListener('click', function() {
+                    // Remove active class from all days
+                    scheduleDays.forEach(d => d.classList.remove('active'));
+                    
+                    // Add active class to clicked day
+                    this.classList.add('active');
+                    
+                    // In a real implementation, you would update the schedule display
+                    // based on the selected day using scheduleData
+                    console.log("Dia selecionado:", this.textContent.trim());
+                });
+            });
+        }
+
+        // Contact form handling
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const formData = new FormData(this);
+                const data = Object.fromEntries(formData);
+                
+                // Simulate form submission
+                console.log("Formulário enviado:", data);
+                
+                // Show success message
+                alert("Mensagem enviada com sucesso! Entraremos em contato em breve.");
+                this.reset();
+            });
+        }
+
+        // Cookie consent functions
+        function acceptCookies() {
+            localStorage.setItem('cookiesAccepted', 'true');
+            cookieConsent.classList.add('hidden');
+            console.log("Cookies aceitos");
+        }
+
+        function declineCookies() {
+            localStorage.setItem('cookiesAccepted', 'false');
+            cookieConsent.classList.add('hidden');
+            console.log("Cookies recusados");
+        }
+
+        // Language selector
+        const languageSelector = document.querySelector('select');
+        if (languageSelector) {
+            languageSelector.addEventListener('change', function(e) {
+                console.log("Idioma alterado para:", e.target.value);
+                // In a real implementation, you would change the page language here
+                alert("Funcionalidade de troca de idioma em desenvolvimento!");
+            });
+        }
+
+        // Social media links
+        document.querySelectorAll('.social-btn, .social-icon').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const platform = this.querySelector('i').className.split('fa-')[1].split(' ')[0];
+                console.log("Redirecionando para:", platform);
+                // In a real implementation, you would redirect to actual social media pages
+            });
+        });
+
+        // Newsletter subscription
+        const newsletterForm = document.querySelector('.flex input[type="email"]');
+        const newsletterButton = document.querySelector('.flex button');
+        
+        if (newsletterButton) {
+            newsletterButton.addEventListener('click', function() {
+                const email = newsletterForm.value;
+                if (email && email.includes('@')) {
+                    alert("Inscrição na newsletter realizada com sucesso!");
+                    newsletterForm.value = '';
+                } else {
+                    alert("Por favor, insira um e-mail válido.");
+                }
+            });
+        }
+    </script>
+
+    <style>
+        /* Custom Styles */
+        .nav-link {
+            @apply text-gray-300 hover:text-white px-3 py-2 rounded-lg transition-colors duration-200 hover:bg-gray-800/50;
+        }
+
+        .nav-link:hover {
+            @apply transform scale-105;
+        }
+
+        .player-control {
+            @apply transition-all duration-200 hover:shadow-lg hover:shadow-accent/20;
+        }
+
+        .player-control:hover {
+            @apply transform scale-105;
+        }
+
+        .schedule-day {
+            @apply bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 transition-colors;
+        }
+
+        .schedule-day.active {
+            @apply bg-gradient-to-r from-accent to-radio-red text-white;
+        }
+
+        .program-item {
+            @apply flex items-center justify-between p-4 bg-gray-800/20 rounded-lg hover:bg-gray-800/40 transition-colors;
+        }
+
+        .program-time {
+            @apply text-sm text-gray-400 font-mono w-24;
+        }
+
+        .program-info {
+            @apply flex-1 mx-4;
+        }
+
+        .program-tag {
+            @apply px-3 py-1 text-xs rounded-full bg-gray-700 text-gray-300;
+        }
+
+        .team-card {
+            @apply bg-gray-800/30 p-6 rounded-2xl border border-gray-700 hover:border-accent transition-all duration-300 text-center;
+        }
+
+        .team-card:hover {
+            @apply transform -translate-y-2 shadow-xl shadow-accent/10;
+        }
+
+        .team-image {
+            @apply w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-gray-700;
+        }
+
+        .team-image img {
+            @apply w-full h-full object-cover;
+        }
+
+        .social-icon {
+            @apply w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center text-gray-300 hover:text-white hover:bg-gray-600 transition-colors;
+        }
+
+        .social-btn {
+            @apply w-12 h-12 rounded-full flex items-center justify-center text-white transition-transform duration-200;
+        }
+
+        .social-btn:hover {
+            @apply transform scale-110;
+        }
+
+        .contact-input {
+            @apply w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all;
+        }
+
+        .footer-link {
+            @apply text-gray-400 hover:text-white transition-colors;
+        }
+
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            @apply bg-gray-900;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            @apply bg-gray-700 rounded-full;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            @apply bg-gray-600;
+        }
+
+        /* Selection Color */
+        ::selection {
+            @apply bg-accent/30 text-white;
+        }
+
+        /* Smooth transitions */
+        * {
+            @apply transition-colors duration-200;
+        }
+    </style>
+</body>
+</html>
